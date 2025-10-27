@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<section class="homepage-reviews" style="background-color:#f9f9f9; padding:60px 20px; text-align:center;">
+  <div class="container" style="max-width:1100px; margin:0 auto;">
+    <h2 style="font-size:28px; font-weight:600; margin-bottom:40px;">
+      {{ section.settings.heading }}
+    </h2>
+
+    <div class="swiper review-swiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide">
+            <div class="review-card" style="background:white; padding:30px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08); max-width:400px; margin:0 auto;">
+              <h4 style="margin-bottom:10px;">{{ block.settings.name }}</h4>
+              <p style="color:#f4b400; font-size:18px; margin-bottom:10px;">
+                {% for i in (1..block.settings.stars) %}⭐{% endfor %}
+              </p>
+              <p style="font-size:15px; color:#555;">"{{ block.settings.review }}"</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Pagination dots -->
+      <div class="swiper-pagination" style="margin-top:20px;"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    new Swiper(".review-swiper", {
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 1,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Homepage Reviews Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "What Our Customers Say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Customer Name",
+          "default": "Customer Name"
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Star Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Customer Review",
+          "default": "Write the review text here."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Homepage Reviews Carousel",
+      "category": "Testimonials",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "name": "Ayesha Sadaf",
+            "stars": 5,
+            "review": "I absolutely love this IPL hair remover! It’s painless, easy to use, and I’ve already noticed less hair growth after a few sessions."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Fatima Sheikh",
+            "stars": 5,
+            "review": "This wig looks so natural! Perfect fitting and feels super comfortable all day."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Laiba Tairq",
+            "stars": 5,
+            "review": "Design elegant hai aur mist evenly nikalti hai. Pura room refresh ho jata hai!"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "name": "Ahmed Raza",
+            "stars": 5,
+            "review": "TDS meter accurate reading deta hai aur use karna bohat easy hai. Highly recommended!"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
