@@ -560,42 +560,6 @@
         "border_color_card": "#f0f1f4"
       }
     },
-    "custom_section_3RAjAX": {
-      "type": "custom-section",
-      "name": "t:flex_section.names.custom_section",
-      "settings": {
-        "container": "container",
-        "padding_full_width": 0,
-        "section_height": "",
-        "section_height_custom": 50,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "background_media": "image",
-        "style_video": "mp4",
-        "video_position": "cover",
-        "video_ytb": "eTCtDW7O1aM",
-        "video_ytb_mb": "",
-        "autoplay_video": true,
-        "background_image": "shopify://shop_images/IPL_hair_remover_device.jpg",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "pd-top-desktop": 50,
-        "pd-top-tablet": 50,
-        "pd-top-mobile": 50,
-        "pd-bottom-desktop": 50,
-        "pd-bottom-tablet": 50,
-        "pd-bottom-mobile": 50
-      }
-    },
     "1761568875ec676359": {
       "type": "_blocks",
       "blocks": {
@@ -632,6 +596,7 @@
       "block_order": [
         "ai_gen_block_0475fee_gVmfcq"
       ],
+      "disabled": true,
       "settings": {}
     }
   },
@@ -640,7 +605,6 @@
     "1761058423091499b9",
     "product-recommendations",
     "product-recently-viewed",
-    "custom_section_3RAjAX",
     "1761568875ec676359"
   ]
 }
