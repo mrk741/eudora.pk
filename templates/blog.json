@@ -30,8 +30,8 @@
         "6543713f-63f0-4882-ad34-5a2cdf3308dd": {
           "type": "product_block",
           "settings": {
-            "heading": "Featured Products",
-            "product_block_collection": "collection-home-1-2",
+            "heading": "New Arrivals",
+            "product_block_collection": "new-arrivals",
             "product_block_layout": "grid",
             "product_block_limit": 4,
             "product_block_dots": false,
