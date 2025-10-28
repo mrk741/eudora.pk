@@ -42,6 +42,7 @@
           "type": "image",
           "settings": {
             "heading": "",
+            "image": "shopify://shop_images/i-heart-black-friday.jpg",
             "link": ""
           }
         },
@@ -49,6 +50,7 @@
           "type": "image",
           "settings": {
             "heading": "",
+            "image": "shopify://shop_images/Mobile_02.jpg",
             "link": ""
           }
         },
