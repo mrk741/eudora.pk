@@ -22,7 +22,8 @@
         <meta name="theme-color" content="">
         <link rel="canonical" href="{{ canonical_url }}" canonical-shop-url="{{ shop.url }}/">
         {%- if settings.favicon != blank -%}
-            <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ settings.favicon | image_url: width: 32 | prepend: 'https:' }}">
+            <link rel="shortcut icon" type="image/png" href="{{ settings.favicon | image_url: width: 32 | prepend: 'https:' }}">
         {%- endif -%}
         <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
         <title>{{ page_title }} {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%} {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}</title>
