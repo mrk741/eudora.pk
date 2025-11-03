@@ -154,13 +154,13 @@
             "atc_animation": "horizontal-shaking",
             "atc_color": "#232323",
             "atc_border_color": "#232323",
-            "atc_bg_color": "#FFFFFF",
+            "atc_bg_color": "#ffffff",
             "atc_bg_color_gradient": "",
-            "atc_color_hover": "#FFFFFF",
+            "atc_color_hover": "#ffffff",
             "atc_border_color_hover": "#232323",
             "atc_bg_color_hover": "#232323",
             "atc_bg_color_gradient_hover": "",
-            "bin_color": "#FFFFFF",
+            "bin_color": "#ffffff",
             "bin_border_color": "#acacac",
             "bin_bg_color": "#232323",
             "bin_bg_color_gradient": "",
@@ -216,7 +216,7 @@
             "type": "all",
             "content": "",
             "product_custom_source": "key_text",
-            "product_tab_key_metafield": "c.f.faq_list",
+            "product_tab_key_metafield": "c_f.faq_list",
             "enable_btn_show_more": false,
             "maximum_des_to_show": 300
           }
@@ -443,9 +443,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "max_width": 1200,
             "show_shop_reviews": false,
-            "empty_state": "empty_widget",
-            "max_width": 1200
+            "empty_state": "empty_widget"
           }
         }
       },
