@@ -213,7 +213,7 @@
           "settings": {
             "open_tab_mobile": false,
             "title": "FAQ's",
-            "type": "all",
+            "type": "metafield",
             "content": "",
             "product_custom_source": "key_text",
             "product_tab_key_metafield": "faq",
