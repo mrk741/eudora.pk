@@ -362,18 +362,27 @@
                             "
                         >
                     {%- endif -%}
-                        {%- for product in collection.products limit: limit -%}
-                            <div class="product{% if swipe %} slider__slide grid__item{% endif %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"{% if settings.banner_animation == 'effect_fade_up' %} style="--animation-order: {{ forloop.index }};"{% endif %}>
-                                {% render 'product-grid-layout',
-                                    product_card_product: product,
-                                    media_size: image_ratio,
-                                    portrait_aspect_ratio: '125',
-                                    complementary_product_button_atc: true,
-                                    serial: forloop.index,
-                                    sectionId: sectionId
-                                %}
-                            </div>
-                        {%- endfor -%}
+{% assign current_collection = product.collections.first %}
+
+{% if current_collection and current_collection.products_count > 1 %}
+  {% for related_product in current_collection.products limit: limit %}
+    {% if related_product.id != product.id %}
+      <div class="product{% if swipe %} slider__slide grid__item{% endif %}{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"{% if settings.banner_animation == 'effect_fade_up' %} style="--animation-order: {{ forloop.index }};"{% endif %}>
+        {% render 'product-grid-layout',
+          product_card_product: related_product,
+          media_size: image_ratio,
+          portrait_aspect_ratio: '125',
+          complementary_product_button_atc: true,
+          serial: forloop.index,
+          sectionId: sectionId
+        %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <p>No related products available from the same collection.</p>
+{% endif %}
+
                     </div>
                     {%- if swipe -%}
                         <div class="slider-buttons no-js-hidden{% if products_to_display < 4 %} medium-hide{% endif %}{% if products_to_display < 3 %} small-hide{% endif %}">
