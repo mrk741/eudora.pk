@@ -56,6 +56,7 @@
         },
         "9bcdee17-7ee7-4353-b16c-f7b04bdf5b84": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Custom Block",
             "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... or whatever you like.</p>\n<p>There are many similar sample content placeholders across the store. All editable from Theme Editor.</p>"
@@ -63,6 +64,7 @@
         },
         "580588b2-a150-4670-9def-6bc2575c20ea": {
           "type": "recent_tag",
+          "disabled": true,
           "settings": {
             "heading": "Blog Tags",
             "show_tag_count": false,
@@ -91,7 +93,7 @@
         "show_page_title": true,
         "page_title_alignment": "left",
         "show_collapse": false,
-        "enable_sticky": false,
+        "enable_sticky": true,
         "sidebar_layout": "layout_2",
         "sidebar_collapse_default": "expand",
         "sidebar_position": "left",
