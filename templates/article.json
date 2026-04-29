@@ -42,6 +42,7 @@
         },
         "c04b7f25-8b25-4edb-a6fc-ed43934d98b4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Custom Block",
             "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... or whatever you like.</p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>"
@@ -49,6 +50,7 @@
         },
         "73becaeb-c487-4f3b-93aa-39f4bef40c07": {
           "type": "block_quote",
+          "disabled": true,
           "settings": {
             "enable_bg_color": true,
             "bg_color_content": "#fafafa",
@@ -64,6 +66,7 @@
         },
         "df6f199c-e8b4-46e7-8d3f-12e6302e295c": {
           "type": "block_quote",
+          "disabled": true,
           "settings": {
             "enable_bg_color": false,
             "bg_color_content": "#fafafa",
