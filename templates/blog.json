@@ -93,7 +93,7 @@
         "show_page_title": true,
         "page_title_alignment": "left",
         "show_collapse": false,
-        "enable_sticky": true,
+        "enable_sticky": false,
         "sidebar_layout": "layout_2",
         "sidebar_collapse_default": "expand",
         "sidebar_position": "left",
